@@ -249,6 +249,7 @@ grid-gap: 10px;
 grid-column: auto / auto;
 grid-row: auto / auto;
 }
+    }
 @media all and (max-width: 500px) {
 .grid {
 grid-template-columns: 1fr;
@@ -256,9 +257,8 @@ grid-template-columns: 1fr;
 img.page_header_item{
 align-self: center;
 }
-    
-}
-h1{
+  h1{
 font-size: 20px;
-  }
+  }  
 }
+
