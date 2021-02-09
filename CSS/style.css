@@ -20,14 +20,14 @@ font-weight: var(--font-weight-700);
 }
 
 h2 {
-@extend h1
+font-weight: 700;
 font-size: 24px;
   
     
 }
 
 h3 {
-@extend h1
+font-weight: 700;
 font-size: 18px;
   
 }
