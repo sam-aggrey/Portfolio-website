@@ -1,0 +1,347 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+font-family: 'Lato', sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.6;
+   
+}
+
+
+
+h1{
+font-size: 30;
+font-weight: 700;
+   
+  
+}
+
+h2 {
+@extend h1
+font-size: 24px;
+  
+    
+}
+
+h3 {
+@extend h1
+font-size: 18px;
+  
+}
+
+/* My colors for my website
+
+        #462c2a
+        #a0a093
+        deepskyblue
+        #C20114
+
+        #007fab
+
+        #ffffff
+        */
+/* Css native variables */
+.navigation-list__item--active{
+text-decoration: none;
+}
+
+.navigation-list__item{
+color: deepskyblue;
+}
+
+.navigation-list__item:hover{
+color: green;
+}
+
+:focus{
+color: green;
+}
+
+.navigation-list__item:active{
+background-color: #007fab;
+    
+}
+
+.navigation-list__item:visited{
+color:  green;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+display: inline-block;
+margin-left: 15px;
+  
+}
+
+
+.profile_potrait{
+    
+float: left;
+width: 250px;
+margin-right: 40px;
+border-radius: 50%;
+}
+
+.button {
+        
+border: none;
+display: inline-block; 
+font-family: inherit;
+background-color: #357b70;
+color: white;
+text-decoration: none;    
+padding: 10px;
+border-radius: 3px;
+/* width of the border, type, color */
+border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+-webkit-transition: 0.2s opacity;
+transition: 0.2s opacity;
+margin-top: 10px;
+margin-bottom: 20px;
+    
+}
+
+.button:hover,
+.button:focus {
+/* lets the mouse appear as a hand when hovering over the button */
+cursor: pointer;
+/* reduces the opacity of the button to 80% */
+opacity: 0.8;
+}
+
+#about-section{
+    
+margin: 0 auto;
+width: 50%;
+text-align: center;
+}
+
+#about-section h1{
+text-align: center;
+}
+
+
+.page_footer{
+clear: both;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+text-align: center;
+}
+.profile_span{
+color:deepskyblue;
+}
+
+.profile{
+max-width: 700px;
+margin: 0 auto;
+}
+
+.page_header {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+width: 100%;
+padding: 20px;
+
+}
+
+.page_header_item {
+-webkit-box-flex: 0;
+-ms-flex: 0 1 200px;
+flex: 0 1 200px;
+width: 20px;
+           
+}
+
+img.page_header_item{
+-ms-flex-item-align: center;
+-ms-grid-row-align: center;
+align-self:center;
+}
+
+
+.page_header_item:last-child{
+-webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+text-align: right;
+    
+}
+
+#svg-section{
+margin: 0 auto;
+text-align: center;
+}
+@-webkit-keyframes color-change {
+0%{
+fill: #edc655;  
+}
+50%{
+fill: #fcffad;
+}
+100%{
+fill: #f76414;
+}
+}
+@keyframes color-change {
+0%{
+fill: #edc655;  
+}
+50%{
+fill: #fcffad;
+}
+100%{
+fill: #f76414;
+}
+}
+.sun{
+-webkit-animation: 4s color-change infinite alternate linear;
+        animation: 4s color-change infinite alternate linear;
+}
+@-webkit-keyframes cloud-move {
+from{
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+to{
+-webkit-transform: translate(200px, 50px);
+        transform: translate(200px, 50px);
+  }
+}
+@keyframes cloud-move {
+from{
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+to{
+-webkit-transform: translate(200px, 50px);
+        transform: translate(200px, 50px);
+  }
+}
+@-webkit-keyframes cloud-move-reverse {
+from{
+-webkit-transform: translate(446px, 48px);
+        transform: translate(446px, 48px);
+}
+to {
+-webkit-transform: translate(100px, 48px);
+        transform: translate(100px, 48px);
+}
+}
+@keyframes cloud-move-reverse {
+from{
+-webkit-transform: translate(446px, 48px);
+        transform: translate(446px, 48px);
+}
+to {
+-webkit-transform: translate(100px, 48px);
+        transform: translate(100px, 48px);
+}
+}
+.cloud-back {
+-webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+        animation: 34s cloud-move-reverse infinite alternate linear;
+}
+.cloud-front {
+-webkit-animation: 30s cloud-move infinite alternate linear;
+        animation: 30s cloud-move infinite alternate linear;
+}
+
+/*...Work CSS */
+
+/*.The default grid row is already devided into two, so even if we delete the grid template rows, it will still work */
+.grid {
+display: -ms-grid;
+display: grid;
+-ms-grid-columns:1fr 20px 1fr 20px 1fr;
+grid-template-columns:1fr 1fr 1fr;;
+-ms-grid-rows: 300px 20px 300px;;
+grid-template-rows: 300px 300px;
+grid-gap: 20px;
+ 
+}
+.grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+ 
+}
+.grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+ 
+}
+.grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+ 
+}
+.grid > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+ 
+}
+.grid > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+ 
+}
+.grid > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+ 
+}
+
+.grid__item {
+background-color: lightgray;
+}
+
+
+@media all and (min-width: 500px) and (max-width: 750px){
+.grid {
+-ms-grid-columns: 1fr 20px 1fr;
+grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+.grid {
+grid-gap: 10px;
+  }
+.grid__item:last-child {
+grid-column: auto / auto;
+grid-row: auto / auto;
+}
+@media all and (max-width: 500px) {
+.grid {
+-ms-grid-columns: 1fr;
+grid-template-columns: 1fr;
+}
+img.page_header_item{
+-ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+    
+}
+h1{
+font-size: 20px;
+  }
+}

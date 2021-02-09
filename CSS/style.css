@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+font-family: 'Lato', sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.6;
+   
+}
+
+
+
+h1{
+font-size: var(--font-size-30);
+font-weight: var(--font-weight-700);
+   
+  
+}
+
+h2 {
+@extend h1
+font-size: 24px;
+  
+    
+}
+
+h3 {
+@extend h1
+font-size: 18px;
+  
+}
+
+/* My colors for my website
+
+        #462c2a
+        #a0a093
+        deepskyblue
+        #C20114
+
+        #007fab
+
+        #ffffff
+        */
+/* Css native variables */
+:root {
+--primary-color: #357b70;
+--secondary-color: deepskyblue;
+--dark-grey: #2b2b2b;
+--dark-green: green;
+--fourth-color: #f76414;
+--fith-color: #fcffad;
+--sith-color: #edc655;
+--light-grey: #a0a093;
+--light-blue: #007fab;
+--dark-brown: #C20114;
+--site-visit: green;
+--sky-blue:deepskyblue;
+--font-weight-700:700;
+--font-size-30:30;
+
+}
+.navigation-list__item--active{
+text-decoration: none;
+}
+
+.navigation-list__item{
+color: var(--secondary-color);
+}
+
+.navigation-list__item:hover, :focus{
+color: var(--dark-green);
+}
+
+.navigation-list__item:active{
+background-color: var( --light-blue);
+    
+}
+
+.navigation-list__item:visited{
+color:  var(--site-visit);
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+display: inline-block;
+margin-left: 15px;
+  
+}
+
+
+.profile_potrait{
+    
+float: left;
+width: 250px;
+margin-right: 40px;
+border-radius: 50%;
+}
+
+.button {
+        
+border: none;
+display: inline-block; 
+font-family: inherit;
+background-color: var( --primary-color);
+color: white;
+text-decoration: none;    
+padding: 10px;
+border-radius: 3px;
+/* width of the border, type, color */
+border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+transition: 0.2s opacity;
+margin-top: 10px;
+margin-bottom: 20px;
+    
+}
+
+.button:hover,
+.button:focus {
+/* lets the mouse appear as a hand when hovering over the button */
+cursor: pointer;
+/* reduces the opacity of the button to 80% */
+opacity: 0.8;
+}
+
+#about-section{
+    
+margin: 0 auto;
+width: 50%;
+text-align: center;
+    
+}
+
+#about-section h1{
+text-align: center;
+}
+
+
+.page_footer{
+clear: both;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+.profile_span{
+color:deepskyblue;
+}
+
+.profile{
+max-width: 700px;
+margin: 0 auto;
+}
+
+.page_header {
+display: flex;
+width: 100%;
+padding: 20px;
+
+}
+
+.page_header_item {
+flex: 0 1 200px;
+width: 20px;
+           
+}
+
+img.page_header_item{
+align-self: center;
+}
+
+
+.page_header_item:last-child{
+flex-grow: 1;
+text-align: right;
+    
+}
+
+#svg-section{
+margin: 0 auto;
+text-align: center;
+}
+@keyframes color-change {
+0%{
+fill: var(--sith-color);  
+}
+50%{
+fill: var(--fith-color);
+}
+100%{
+fill: var(--fourth-color);
+}
+}
+.sun{
+animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+from{
+    transform: translate(0, 50px);
+  }
+to{
+transform: translate(200px, 50px);
+  }
+}
+@keyframes cloud-move-reverse {
+from{
+transform: translate(446px, 48px);
+}
+to {
+transform: translate(100px, 48px);
+}
+}
+.cloud-back {
+animation: 34s cloud-move-reverse infinite alternate linear;
+}
+.cloud-front {
+animation: 30s cloud-move infinite alternate linear;
+}
+
+/*...Work CSS */
+
+/*.The default grid row is already devided into two, so even if we delete the grid template rows, it will still work */
+.grid {
+display: grid;
+grid-template-columns:1fr 1fr 1fr;;
+grid-template-rows: 300px 300px;
+grid-gap: 20px;
+ 
+}
+
+.grid__item {
+background-color: lightgray;
+}
+
+
+@media all and (min-width: 500px) and (max-width: 750px){
+.grid {
+grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+.grid {
+grid-gap: 10px;
+  }
+.grid__item:last-child {
+grid-column: auto / auto;
+grid-row: auto / auto;
+}
+@media all and (max-width: 500px) {
+.grid {
+grid-template-columns: 1fr;
+}
+img.page_header_item{
+align-self: center;
+}
+    
+}
+h1{
+font-size: 20px;
+  }
+}
