@@ -134,7 +134,10 @@ text-align: center;
 text-align: center;
 }
 
-
+.footer_image{
+    width: 30px;
+    height: 30px;
+}
 .page_footer{
 clear: both;
 display: -webkit-box;
