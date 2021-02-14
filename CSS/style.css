@@ -138,7 +138,10 @@ text-align: center;
 #about-section h1{
 text-align: center;
 }
-
+.footer_image{
+    width: 30px;
+    height: 30px;
+}
 
 .page_footer{
 clear: both;
