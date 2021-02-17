@@ -18,6 +18,10 @@ line-height: 1.6;
    
 }
 
+header{
+    background-color:deepskyblue;
+    margin-bottom: 80px;
+}
 
 
 h1{
@@ -111,7 +115,9 @@ border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 -webkit-transition: 0.2s opacity;
 transition: 0.2s opacity;
 margin-top: 10px;
-margin-bottom: 20px;
+margin-bottom: 40px;
+position: relative;
+left: 50px;
     
 }
 
@@ -128,15 +134,60 @@ opacity: 0.8;
 margin: 0 auto;
 width: 50%;
 text-align: center;
+
+
 }
 
 #about-section h1{
 text-align: center;
 }
 
+.skills_table{
+    
+    position: relative;
+    left: 140px;
+    
+}
+
+.experience, .experience_data{
+    position: relative;
+    left: 50px;
+}
+
+#contact_me{
+    text-align: center;
+    color: white;
+    background-color: #c2b092;
+    padding-top: 20px;
+    
+}
+form{
+    
+  padding: 10px;
+    
+}
+
+input{
+    
+    width: 30%;
+    margin-bottom: 10px;
+        
+}
+
+textarea{
+    position: relative;
+    left: 50px;
+}
+
+footer{
+    text-align: center;
+   
+}
+
 .footer_image{
     width: 30px;
     height: 30px;
+   
 }
 .page_footer{
 clear: both;
@@ -189,6 +240,13 @@ align-self:center;
 text-align: right;
     
 }
+
+section h1{
+  
+    text-align: center;
+}
+
+
 
 #svg-section{
 margin: 0 auto;
@@ -314,7 +372,7 @@ grid-gap: 20px;
 }
 
 .grid__item {
-background-color: lightgray;
+background-color: #c2b092;
 }
 
 
@@ -332,6 +390,7 @@ grid-gap: 10px;
 grid-column: auto / auto;
 grid-row: auto / auto;
 }
+}
 @media all and (max-width: 500px) {
 .grid {
 -ms-grid-columns: 1fr;
@@ -342,9 +401,8 @@ img.page_header_item{
     -ms-grid-row-align: center;
     align-self: center;
 }
-    
-}
-h1{
+  h1{
 font-size: 20px;
-  }
+  }  
 }
+
